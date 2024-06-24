@@ -1,0 +1,1 @@
+<li><a href="{{url($url)}}" class="@if($active) active @endif">{{ $label}}</a></li>
