@@ -18,19 +18,7 @@
                 <x-layout.frontend.header.menu-item label="Kontak" url="kontak" />
                 
                 <x-layout.frontend.header.menu-item label="Anggota!" url="login" />
-                @if (auth()->guard('anggota')->user())
-                    <li class="dropdown">
-                        <a href="#">
-                            <span> {{ auth()->guard('anggota')->user()->nama }}</span>
-                            <i class="bi bi-chevron-down dropdown-indicator"></i>
-                        </a>
-                        <ul>
-                            <li><a href="anggota/{{ auth()->guard('anggota')->user()->id }}"> Profil</a></li>
-                            <li><a href="{{ url('logout') }}">Logout</a></li>
-                        </ul>
-                    </li>
-                @endif
-
+              
             </ul>
         </nav><!-- .navbar -->
 

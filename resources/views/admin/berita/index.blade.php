@@ -36,22 +36,7 @@
                                             <x-button.edit url="admin/berita" id="{{ $berita->id }}" />
                                             <x-button.delete id="{{ $berita->id }}" />
 
-                                            @if ($berita->status == 1)
-                                                <form action="{{ url('admin/berita/post', $berita->id) }}"
-                                                    method="post">
-                                                    @csrf
-                                                    @method('PUT')
-                                                    <button class="btn btn-default"><span class="fa fa-check"></span> Publis
-                                                    </button>
-                                                </form>
-                                                <form action="{{ url('admin/berita/arsip', $berita->id) }}"
-                                                    method="post">
-                                                    @csrf
-                                                    @method('PUT')
-                                                    <button class="btn btn-secondary"><span
-                                                            class="fa fa-archive"></span> Arsip</button>
-                                                </form>
-                                            @endif
+
                                             @if ($berita->status == 2)
                                                 <form action="{{ url('admin/berita/arsip', $berita->id) }}"
                                                     method="post">

@@ -74,17 +74,17 @@
         }
     </style>
     <!-- ======= Header ======= -->
-    <x-layout.frontend.header/>
+    <x-layout.anggota.header/>
     <!-- End Header -->
     
     
     <main id="main">
-        <x-layout.frontend.notif/>
+        <x-layout.anggota.notif/>
         {{ $slot }}
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
-    <x-layout.frontend.footer/>
+    <x-layout.anggota.footer/>
     <!-- End Footer -->
 
     <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i

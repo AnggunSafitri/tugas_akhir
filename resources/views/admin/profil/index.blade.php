@@ -6,11 +6,13 @@
                     <h4 class="card-title">
                         Data Profil
                     </h4>
-                    <a href="{{ url('admin/profil/create') }}" class="btn btn-primary float-right">
-                        <i class="fas fa-plus">
-                        </i>
-                        Tambah Data Profil
-                    </a>
+                    @if ($list_profil <= '1' )
+                        <a href="{{ url('admin/profil/create') }}" class="btn btn-primary float-right">
+                            <i class="fas fa-plus">
+                            </i>
+                            Tambah Data Profil
+                        </a>
+                    @endif
                 </div>
 
                 <div class="card-body">
@@ -31,7 +33,7 @@
                                         <div class="btn-group">
                                             <x-button.info url="admin/profil" id="{{ $profil->id }}" />
                                             <x-button.edit url="admin/profil" id="{{ $profil->id }}" />
-                                            <x-button.delete id="{{ $profil->id }}"/>
+                                            <x-button.delete id="{{ $profil->id }}" />
                                         </div>
                                     </td>
                                     <td class="text-center"> {{ $profil->nama }}</td>

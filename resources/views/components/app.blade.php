@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -23,9 +21,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{{ url('public') }}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="{{ url('public') }}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="{{ url('public') }}/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-    @vite('resources/css/app.css')
+    <link rel="stylesheet" href="{{ url('public') }}/plugins/summernote/summernote-bs4.min.css">
 
-    
+
+
     @stack('style')
 </head>
 
@@ -40,7 +39,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <x-layout.admin.sidebar />
 
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper pt-5 pb-5" style="background-image: url({{ url('public/dist/img/custom/background.png') }})">
+        <div class="content-wrapper pt-5 pb-5"
+            style="background-image: url({{ url('public/dist/img/custom/background.png') }})">
             <!-- Content Header (Page header) -->
             <div class="content-header">
                 <div class="container-fluid">
@@ -113,28 +113,54 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="{{ url('public') }}/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
     <script src="{{ url('public') }}/plugins/jszip/jszip.min.js"></script>
     <script src="{{ url('public') }}/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="{{ url('public') }}/plugins/summernote/summernote-bs4.min.js"></script>
+
     <script src="{{ url('public') }}/plugins/pdfmake/vfs_fonts.js"></script>
     <script src="{{ url('public') }}/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
     <script src="{{ url('public') }}/plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="{{ url('public') }}/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     {{-- url sweetealert t kah di script mah e? --}}
     <script>
-        $(function () {
-          $("#example1").DataTable({
-            "responsive": true, "lengthChange": false, "autoWidth": false,
-            // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-          }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-          $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-            "responsive": true,
-          });
+        $(function() {
+            $("#example1").DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "autoWidth": false,
+                // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
         });
-      </script>
+    </script>
+    <script>
+        $(function() {
+            // Summernote
+            $('#summernote').summernote()
+
+            // CodeMirror
+            CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+                mode: "htmlmixed",
+                theme: "monokai"
+            });
+        })
+        $(function() {
+            // Summernote
+            $('#summernote1').summernote()
+
+            // CodeMirror
+            CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+                mode: "htmlmixed",
+                theme: "monokai"
+            });
+        })
+    </script>
     @stack('script')
 </body>
 

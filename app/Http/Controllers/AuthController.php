@@ -19,7 +19,7 @@ class AuthController extends Controller
         }
 
 		if (auth()->guard('anggota')->attempt(['email' => request('email'), 'password' => request('password')])){
-            return redirect('weberita')->with('success', 'Login Berhasil');
+            return redirect('anggota')->with('success', 'Login Berhasil');
         }
 
         return back()->with('danger','Login Gagal');
@@ -31,6 +31,6 @@ class AuthController extends Controller
         Auth::guard('anggota')->logout();
 
         $request->session()->invalidate();
-        return redirect('login');
+        return redirect('/');
     }
 }

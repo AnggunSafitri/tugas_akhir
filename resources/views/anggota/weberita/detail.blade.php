@@ -1,5 +1,5 @@
-<x-front title="Berita | Detail">
-    <x-layout.frontend.breadcrumbs menu="Berita Detail" gambar="dugong.jpg" />
+<x-anggota title="Berita | Detail">
+    <x-layout.anggota.breadcrumbs menu="Berita Detail" gambar="dugong.jpg" />
     @include('menu.menu')
     <!-- ======= Blog Details Section ======= -->
     <section id="blog" class="blog">
@@ -48,17 +48,17 @@
 
                             <div class="mt-3">
                                 @foreach ($list_berita->where('status', '2') as $berita)
-                                   
+                                    @if (Auth::guard('anggota')->user()->id == $berita->id_anggota)
                                         <div class="post-item mt-3">
                                             <img src="{{ url("public/$berita->foto") }}" alt="">
                                             <div>
                                                 <h4><a
-                                                        href="{{ url('weberita', $berita->id) }}">{{ $berita->judul }}</a>
+                                                        href="{{ url('anggota/weberita', $berita->id) }}">{{ $berita->judul }}</a>
                                                 </h4>
                                                 <time datetime="">{{ $berita->tanggal }}</time>
                                             </div>
                                         </div><!-- End recent post item-->
-                                   
+                                    @endif
                                 @endforeach
                                
                             </div>

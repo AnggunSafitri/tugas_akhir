@@ -19,32 +19,32 @@
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label text-left">Deskripsi</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" name="deskripsi" id="" ></textarea>
+                        <textarea class="form-control" name="deskripsi" id="" required></textarea>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label text-left">Sejarah</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" name="sejarah" id="" ></textarea>
+                        <textarea class="form-control" name="sejarah" id="" required></textarea>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label text-left">Experience</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" name="experience" id="" ></textarea>
+                        <textarea class="form-control" name="experience" id="" required></textarea>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label text-left">Project</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" name="project" id="" ></textarea>
+                        <textarea class="form-control" name="project" id="" required></textarea>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label text-left">Foto</label>
                     <div class="col-sm-10">
                         <input type="file" class="form-control" name="foto"
-                            placeholder="Foto">
+                            placeholder="Foto" required>
                     </div>
                 </div>
                 <div class="form-group row mb-0">
