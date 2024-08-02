@@ -6,7 +6,7 @@
             <img src="{{ url('public') }}/assets/img/webe.png" alt="">
             <h1>Yayasan WeBe<span>.</span></h1>
         </a>
-
+ 
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         <nav id="navbar" class="navbar">
@@ -17,7 +17,7 @@
                 <x-layout.frontend.header.menu-item label="Profil" url="profil" />
                 <x-layout.frontend.header.menu-item label="Kontak" url="kontak" />
                 
-                <x-layout.frontend.header.menu-item label="Anggota!" url="login" />
+                <x-layout.frontend.header.menu-item label="Login!" url="login" />
               
             </ul>
         </nav><!-- .navbar -->

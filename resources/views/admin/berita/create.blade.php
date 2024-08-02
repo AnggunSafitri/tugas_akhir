@@ -36,12 +36,10 @@
                             placeholder="Tanggal Berita" required>
                     </div>
                 </div>
-                
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label text-left">Deskripsi</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="deskripsi"
-                            placeholder="Deskripsi Berita" required>
+                        <textarea class="summernote" name="deskripsi" id="" required></textarea>
                     </div>
                 </div>
                 <div class="form-group row">

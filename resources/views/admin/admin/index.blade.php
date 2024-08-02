@@ -33,7 +33,6 @@
                                         <div class="btn-group">
                                             <x-button.info url="admin/admin" id="{{ $admin->id }}" />
                                             <x-button.edit url="admin/admin" id="{{ $admin->id }}" />
-                                            <x-button.delete id="{{ $admin->id }}"/>
                                         </div>
                                     </td>
                                     <td class="text-center"> {{ $admin->nama }}</td>

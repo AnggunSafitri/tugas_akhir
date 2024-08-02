@@ -45,6 +45,7 @@ class WeberitaController extends Controller
         $berita->id_anggota = auth()->guard('anggota')->user()->id;
         $berita->judul = request('judul');
         $berita->deskripsi = request('deskripsi');
+        $berita->link_youtube = request('link_youtube');
         $berita->status = 2;
         $berita->handleUploadFoto();
         $berita->tanggal = Carbon::now()->format('Y-m-d');

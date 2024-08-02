@@ -32,7 +32,9 @@
                             <p>
                                 {{ $berita->deskripsi }}
                             </p>
-                        </div><!-- End post content -->
+                        </div>
+                        {!! nl2br($berita->link_youtube)!!}
+                        <!-- End post content -->
 
                     </article><!-- End blog post -->
 
@@ -50,13 +52,15 @@
                                 @foreach ($list_berita->where('status', '2') as $berita)
                                     @if (Auth::guard('anggota')->user()->id == $berita->id_anggota)
                                         <div class="post-item mt-3">
-                                            <img src="{{ url("public/$berita->foto") }}" alt="">
+                                            <img src="{{ url("public/$berita->foto") }}" style="object-fit: cover; position: static; width: 100%; height: 100%;">
                                             <div>
                                                 <h4><a
                                                         href="{{ url('anggota/weberita', $berita->id) }}">{{ $berita->judul }}</a>
                                                 </h4>
                                                 <time datetime="">{{ $berita->tanggal }}</time>
+                                                <a href="{{ url ('anggota/weberita', $berita->id ) }}"> {{ $berita->link }}</a>
                                             </div>
+                                            <embed src="" type="">
                                         </div><!-- End recent post item-->
                                     @endif
                                 @endforeach

@@ -11,7 +11,7 @@
             </div>
             @if (auth()->guard('anggota')->check())
                 <div class="col-lg-12">
-                    <form method="POST" action="{{ url('weberita') }}" id="newsForm" enctype="multipart/form-data">
+                    <form method="POST" action="{{ url('anggota/weberita') }}" id="newsForm" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group row">
                             <div class="col-sm-6">
@@ -35,7 +35,14 @@
                         <div class="form-group row">
                             <div class="col-sm-12 mt-4">
                                 <label for="fileInput">Deskripsikan :</label>
-                                <textarea name="deskripsi" class="form-control summernote" required> </textarea>
+                                <textarea class="summernote" name="deskripsi" id="" required> </textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-12 mt-4">
+                                <label for="fileInput">Link Video :</label>
+                                <input name="link_youtube" class="form-control" required> 
                             </div>
                         </div>
 

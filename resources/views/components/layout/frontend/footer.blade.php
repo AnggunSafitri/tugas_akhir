@@ -6,7 +6,7 @@
                     <div class="footer-info">
                         <h3>Yayasan WeBe</h3>
                         <div class="social-links d-flex mt-3">
-                            <a href="https://www.instagram.com/yayasanwebe?igsh=b2h4Y2t0ajd0dmlv" class="d-flex align-items-center justify-content-center"><i
+                            <a href="https://www.instagram.com/yayasanwebe?igsh=b2h4Y2t0ajd0dmlv" target="-blank" class="d-flex align-items-center justify-content-center"><i
                                     class="bi bi-instagram"></i>
                             </a>
                             <a href="#" class="d-flex align-items-center justify-content-center"><i

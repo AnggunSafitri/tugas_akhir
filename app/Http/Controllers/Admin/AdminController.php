@@ -63,12 +63,4 @@ class AdminController extends Controller
         return redirect('admin/admin')->with('warning','Data Admin Telah di Ubah');
     }
 
-    function destroy($admin) {
-        $admin = Admin::find($admin);
-        $admin->delete();
-
-        return redirect('admin/admin')->with('danger','Data Admin Telah di Hapus');
-
-        
-    }
 }

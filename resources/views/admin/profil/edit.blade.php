@@ -31,13 +31,13 @@
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label text-left">Experience</label>
                     <div class="col-sm-10">
-                        <textarea id="summernote" class="form-control" name="experience">{{$profil->experience}}</textarea>
+                        <textarea class="summernote" name="experience">{{$profil->experience}}</textarea>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label text-left">Project</label>
                     <div class="col-sm-10">
-                        <textarea id="summernote1" class="form-control" name="project">{{$profil->project}}</textarea>
+                        <textarea class="summernote" name="project">{{$profil->project}}</textarea>
                     </div>
                 </div>
                 <div class="form-group row">
