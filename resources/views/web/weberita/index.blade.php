@@ -7,7 +7,9 @@
         <div class="container" data-aos="fade-up">
             <div class=" section-header">
                 <h2>WeBerita</h2>
-                <p>In commodi voluptatem excepturi quaerat nihil error autem voluptate ut et officia consequuntu</p>
+                <p>WeBerita adalah salah satu insiatif dari Yayasan weBe yang berfokus pada penyebaran informasi
+                    dan berita terkait dengan kegiatan Yayasan WeBe
+                </p>
             </div>
 
 

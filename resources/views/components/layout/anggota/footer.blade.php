@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="footer-info">
-                        <h3>Yayasan WeBe</h3>
+                        <h3 style="text-transform: capitalize" >Yayasan WeBe</h3>
                         <div class="social-links d-flex mt-3">
                             <a href="https://www.instagram.com/yayasanwebe?igsh=b2h4Y2t0ajd0dmlv" class="d-flex align-items-center justify-content-center"><i
                                     class="bi bi-instagram"></i>

@@ -11,7 +11,7 @@
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         <nav id="navbar" class="navbar">
             <ul>
-                <x-layout.frontend.header.menu-item label="WeBeranda" url="webenest" />
+                <x-layout.frontend.header.menu-item label="WeBeranda" url="webenest" style="text-transform: capitalize;" />
                 <x-layout.frontend.header.menu-item label="WeBerita" url="weberita" />
                 <x-layout.frontend.header.menu-item label="GiatWebe" url="giat_webe" />
                 <x-layout.frontend.header.menu-item label="Profil" url="profil" />

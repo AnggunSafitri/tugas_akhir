@@ -1,1 +1,1 @@
-<li><a href="{{url($url)}}" class="@if($active) active @endif">{{ $label}}</a></li>
+<li><a href="{{url($url)}}" style="text-transform: capitalize;">{{ $label}}</a></li>

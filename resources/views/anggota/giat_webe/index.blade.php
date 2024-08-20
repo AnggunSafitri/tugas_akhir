@@ -7,9 +7,7 @@
 
                 <div class="section-header">
                     <h2>Giat WeBe</h2>
-                    <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt
-                        quis dolorem
-                        dolore earum</p>
+                    <p>Giat WeBe adalah salah satu kegiatan utama yang diadakan oleh Yayasan WeBe</p>
                 </div>
 
                 <div class="row gy-4">

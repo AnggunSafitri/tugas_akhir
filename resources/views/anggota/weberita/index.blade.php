@@ -7,52 +7,22 @@
         <div class="container" data-aos="fade-up">
             <div class=" section-header">
                 <h2>WeBerita</h2>
-                <p>In commodi voluptatem excepturi quaerat nihil error autem voluptate ut et officia consequuntu</p>
+                <p>WeBerita adalah salah satu insiatif dari Yayasan weBe yang berfokus pada penyebaran informasi
+                    dan berita terkait dengan kegiatan Yayasan WeBe</p>
             </div>
             @if (auth()->guard('anggota')->check())
                 <div class="col-lg-12">
-                    <form method="POST" action="{{ url('anggota/weberita') }}" id="newsForm" enctype="multipart/form-data">
-                        @csrf
-                        <div class="form-group row">
-                            <div class="col-sm-6">
-                                <label for="fileInput">Judul Berita :</label>
-                                <input type="text" class="form-control" name="judul" placeholder="Judul Berita"
-                                    required>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="mb-3">
-                                    <label for="basic-url" class="form-label">Sah Lupak Poto nye</label>
-                                    <div class="input-group">
-                                        <input type="file" class="form-control" name="foto" id="basic-url"
-                                            aria-describedby="basic-addon3 basic-addon4" accept=".jpg, .png, .jpeg">
-                                        <span class="input-group-text" id="basic-addon3">Masukan Aam Poto nye</span>
-                                    </div>
 
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <div class="col-sm-12 mt-4">
-                                <label for="fileInput">Deskripsikan :</label>
-                                <textarea class="summernote" name="deskripsi" id="" required> </textarea>
-                            </div>
+                    <div class="form-group row mb-0 mt-4">
+                        <div class="col-sm-12">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modaltambahberita">
+                                <span class="fa fa-plus"></span> Tambah Berita
+                            </button>
                         </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <div class="col-sm-12 mt-4">
-                                <label for="fileInput">Link Video :</label>
-                                <input name="link_youtube" class="form-control" required> 
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0 mt-4">
-                            <div class="col-sm-12">
-                                <button class="btn btn-primary float-end" data-toggle="modal"
-                                    data-target="#confirmationModal"><span class="fa fa-save"></span> Simpan</button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
                 <hr>
             @endif
@@ -102,31 +72,60 @@
     </section>
     <!-- End Recent Blog Posts Section -->
 
-    <!-- Modal Konfirmasi -->
-    <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog"
-        aria-labelledby="confirmationModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    <div class="modal fade" id="modaltambahberita" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="confirmationModalLabel">Konfirmasi Simpan Data</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 class="modal-title" id="staticBackdropLabel">Tambah Berita</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="confirmationCode">Masukkan Kode Konfirmasi:</label>
-                        <input type="text" class="form-control" id="confirmationCode" placeholder="Kode Konfirmasi"
-                            required>
+
+                <form method="POST" action="{{ url('anggota/weberita') }}" enctype="multipart/form-data">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <label for="fileInput">Judul Berita :</label>
+                                <input type="text" class="form-control" name="judul" placeholder="Judul Berita"
+                                    required>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="mb-3">
+                                    <label for="basic-url" class="form-label">Gambar</label>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control" name="foto" id="basic-url"
+                                            aria-describedby="basic-addon3 basic-addon4" accept=".jpg, .png, .jpeg">
+                                        <span class="input-group-text" id="basic-addon3">Masukkan Gambar Berita</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-12 mt-4">
+                                <label for="fileInput">Deskripsikan :</label>
+                                <textarea class="form-control" name="deskripsi" id="summernote" required> </textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-12 mt-4">
+                                <label for="fileInput">Link Video :</label>
+                                <input name="link_youtube" class="form-control" required>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary" id="confirmSave">Simpan</button>
-                </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal"> Batal</button>
+                        <button class="btn btn-primary"> Simpan</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+   
 
     {{-- @push('script')
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
